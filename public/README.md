@@ -2,6 +2,20 @@
 
 A PHP/MySQL web application for tracking vintage and retro collectibles.
 
+## About This Project
+
+This project was developed as part of a **WEB PROGRAMMING** course assignment. It demonstrates practical implementation of:
+
+- PHP backend development with MySQLi
+- MySQL database design and management
+- User authentication and authorization systems
+- CRUD operations with prepared statements
+- File upload handling and validation
+- Security best practices (SQL injection prevention, XSS protection, password hashing)
+- Responsive web design with Bootstrap
+
+The project is shared publicly for educational purposes and portfolio demonstration.
+
 ## Features
 
 - **Authentication System**: User login and registration with password hashing

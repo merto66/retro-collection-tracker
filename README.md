@@ -16,6 +16,62 @@ This project was developed as part of a **WEB PROGRAMMING** course assignment. I
 
 The project is shared publicly for educational purposes and portfolio demonstration.
 
+## Architecture
+
+```mermaid
+graph TB
+    subgraph client [Client Layer]
+        Browser[Browser]
+        HTML[HTML/CSS/JS<br/>Bootstrap 4.5]
+    end
+    
+    subgraph server [Server Layer - Apache/WAMP]
+        PHP[PHP Application]
+        Auth[Authentication<br/>& Sessions]
+        CRUD[CRUD Operations]
+        Upload[File Upload<br/>Handler]
+        Validation[Input Validation<br/>& Security]
+        MySQLi[MySQLi Driver<br/>Prepared Statements]
+    end
+    
+    subgraph database [Database Layer]
+        MySQL[(MySQL Database)]
+        Users[users table]
+        Items[items table]
+    end
+    
+    Browser --> HTML
+    HTML -->|HTTP Request| PHP
+    PHP --> Auth
+    PHP --> CRUD
+    PHP --> Upload
+    PHP --> Validation
+    Auth --> MySQLi
+    CRUD --> MySQLi
+    Upload --> MySQLi
+    Validation --> MySQLi
+    MySQLi -->|SQL Queries| MySQL
+    MySQL --> Users
+    MySQL --> Items
+    Users -.->|Foreign Key| Items
+    
+    style client fill:#e1f5ff
+    style server fill:#fff4e1
+    style database fill:#e8f5e9
+    style PHP fill:#8892d6
+    style MySQL fill:#4479a1
+```
+
+### Technology Stack
+
+| Layer | Technology | Purpose |
+|-------|-----------|---------|
+| **Frontend** | HTML5, CSS3, Bootstrap 4.5, JavaScript, jQuery | User interface and responsive design |
+| **Backend** | PHP 7.4+, MySQLi | Server-side logic and database operations |
+| **Database** | MySQL 5.7+ / MariaDB | Data persistence and relationships |
+| **Server** | Apache (WAMP/XAMPP) | Web server |
+| **Security** | Prepared Statements, Password Hashing, Session Management | Protection against common vulnerabilities |
+
 ## Features
 
 - **Authentication System**: User login and registration with password hashing

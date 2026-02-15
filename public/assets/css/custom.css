@@ -1,0 +1,63 @@
+/* Custom styles for Vintage Collection Tracking System */
+
+body {
+    background-color: #f8f9fa;
+}
+
+.wrapper {
+    padding: 20px 0;
+}
+
+.carousel-item {
+    min-height: 200px;
+}
+
+.table {
+    background-color: white;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+/* Navbar user text alignment */
+.navbar-text {
+    display: inline-block;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-right: 1rem;
+}
+
+.navbar-nav .nav-item .navbar-text {
+    line-height: 1.5;
+}
+
+.breadcrumb {
+    background-color: transparent;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #495057;
+}
+
+.btn {
+    border-radius: 4px;
+}
+
+.alert {
+    border-radius: 4px;
+}
+
+/* Vintage theme colors */
+.bg-vintage {
+    background-color: #8B4513;
+}
+
+.text-vintage {
+    color: #8B4513;
+}
+
+

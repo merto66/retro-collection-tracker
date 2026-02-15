@@ -1,0 +1,29 @@
+# Sensitive Configuration
+public/config.php
+
+# User Uploaded Files
+public/uploads/*
+!public/uploads/.gitkeep
+
+# IDE Files
+.vscode/
+.idea/
+*.swp
+*.swo
+.cursor/
+
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs and Temporary Files
+*.log
+*.tmp
+*.bak
+error_log
+
+# Database dumps
+*.sql.gz
+*.sql.zip
+backup/

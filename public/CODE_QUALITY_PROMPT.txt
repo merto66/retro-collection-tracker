@@ -1,0 +1,90 @@
+===========================================
+CODE QUALITY IMPROVEMENT PROMPT
+===========================================
+
+Please analyze and improve the code quality of this PHP project with the following specific requirements:
+
+1. ERROR MESSAGES STANDARDIZATION
+   - Convert ALL error messages to English (currently mixed Turkish/English)
+   - Make error messages user-friendly and consistent
+   - Examples to fix:
+     * "Oops! Something went wrong..." → Use consistent format
+     * Any Turkish messages → Convert to English
+     * Database error messages → Make them user-friendly
+
+2. COMMENTS CLEANUP
+   - Remove unnecessary/redundant comments that just repeat what code does
+   - Remove commented-out code blocks
+   - Keep only meaningful comments that explain WHY, not WHAT
+   - Add missing PHPDoc blocks for functions
+   - Examples to remove:
+     * "// Include auth check and config file" (obvious from code)
+     * "// Define variables" (obvious from code)
+     * "// Close connection" (obvious from code)
+   - Examples to keep/add:
+     * Complex business logic explanations
+     * Security-related notes
+     * Function documentation
+
+3. CODE DUPLICATION
+   - Identify and refactor duplicated code
+   - Create reusable functions for common operations:
+     * File upload validation
+     * Permission checking
+     * Error message display
+     * Database error handling
+
+4. FUNCTION EXTRACTION
+   - Extract complex logic into named functions
+   - Examples:
+     * File upload handling → create upload_file() function
+     * Permission checking → create has_permission() function
+     * Image deletion → create delete_old_image() function
+
+5. NAMING CONVENTIONS
+   - Ensure consistent variable naming
+   - Use descriptive function names
+   - Follow PHP naming conventions
+
+6. ERROR HANDLING
+   - Replace die() statements with proper error handling
+   - Show user-friendly messages instead of technical errors
+   - Redirect to error page or show alert instead of killing script
+
+Files to analyze and fix:
+- config.php
+- create.php
+- update.php
+- delete.php
+- read.php
+- index.php
+- my_items.php
+- login.php
+- register.php
+- includes/header.php
+- includes/footer.php
+- includes/auth_check.php
+
+IMPORTANT RULES:
+- DO NOT change the core functionality
+- DO NOT break existing features
+- DO NOT remove security measures (prepared statements, password hashing, etc.)
+- DO keep the code structure similar for easy comparison
+- DO test after changes to ensure nothing breaks
+- DO make incremental changes file by file
+
+OUTPUT FORMAT:
+For each file:
+1. List issues found
+2. Show before/after code comparison
+3. Explain why changes were made
+4. Note any potential side effects
+
+Start with the most critical files first:
+1. config.php (error messages, comments)
+2. create.php (error handling, comments, file upload)
+3. update.php (error handling, comments, file upload)
+4. delete.php (error messages, comments)
+5. Other files as needed
+
+BEGIN ANALYSIS AND IMPROVEMENTS NOW.
